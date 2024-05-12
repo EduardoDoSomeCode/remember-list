@@ -36,14 +36,20 @@ const showHourToday = () => {
 
 }
 
-const displayQuoteToHTML =() =>{
+const displayQuoteToHTML = () => {
     let quoteToDisplayText = document.getElementById('p-text')
-    quoteToDisplayText.innerHTML +=`"${quoteToDisplay[Math.floor(Math.random() * quoteToDisplay.length)]}"`
+    quoteToDisplayText.innerHTML += `"${quoteToDisplay[Math.floor(Math.random() * quoteToDisplay.length)]}"`
 
 }
 
 
-const globalInitFuntion = () =>{
+const globalInitFuntion = () => {
     showHourToday();
     displayQuoteToHTML();
 }
+
+const switchStateOfTask = () => {
+    let mainListDocument = document.querySelector('.main-list')
+
+    mainListDocument.classList.toggle('main-list-style')
+} 

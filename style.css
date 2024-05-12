@@ -1,11 +1,11 @@
 :root {
     --background-color-main: #232946;
-    --background-color-main-dark:#231933;
-    --color--headline--fond:#fffffe;
+    --background-color-main-dark: #231933;
+    --color--headline--fond: #fffffe;
     --buttons-color: #eebbc3;
     --color--paraghrap: #b8c1ec;
-    ---min--border--radius:8px;
-    --main--font--helvetica:'helvetica';
+    ---min--border--radius: 8px;
+    --main--font--helvetica: 'helvetica';
 }
 
 * {
@@ -24,63 +24,85 @@ main {
     justify-content: center;
     flex-direction: column;
 }
-li{
+
+li {
     margin-top: 10px;
     padding: 1rem;
-    border-radius:var(---min--border--radius) ;
+    border-radius: var(---min--border--radius);
     box-shadow: 0 0 2px black;
     transition: transform 200ms;
     list-style: none;
     font-family: var(--main--font--helvetica);
     color: var(--color--paraghrap);
 }
-li:hover{
+
+li:hover {
     transform: scale(0.9);
     background-color: var(--background-color-main-dark);
     cursor: pointer;
 
 }
-li input{
+
+li input {
     margin-right: 20px;
     accent-color: var(--buttons-color);
     border: none;
     transform: scale(1.3);
 }
-.btn{
+
+.btn {
     background-color: var(--buttons-color);
     padding: 10px;
     border: none;
+    transition: background-color 300ms;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--background-color-main-dark);
+    color: var(--color--paraghrap);
 
 }
-#tech:checked{
+
+#tech:checked {
     background-color: green;
-    li{
+
+    li {
         background-color: blue;
     }
 }
 
-li:checked{
+li:checked {
     background-color: red;
 }
-#main-hour{
+
+#main-hour {
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-transform: capitalize;
     font-family: var(--main--font--helvetica);
     color: var(--color--headline--fond);
 }
-.p-text{
+
+.p-text {
     color: var(--color--paraghrap);
     text-transform: uppercase;
     font-family: var(--main--font--helvetica);
     font-style: italic;
     padding: 10px 0 10px 0;
 }
-.main-title{
+
+.main-title {
     color: var(--color--headline--fond);
 }
-.main-list{
+
+.main-list {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.main-list-style{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
 }
